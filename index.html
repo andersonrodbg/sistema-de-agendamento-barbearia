@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Barbearia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Studio Max Barbearia</h1>
+        <form id="form-agendamento">
+            <input class="nome" type="text" id="nome" placeholder="Seu Nome" required>
+            <input class="horario" type="time" id="horario" required>
+            <input class="data" type="date" id="data" required>
+            <button type="submit">Agendar</button>
+        </form>
+        <h2>Horários Agendados</h2>
+        <ul id="lista-agendamentos"></ul>
+    </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
