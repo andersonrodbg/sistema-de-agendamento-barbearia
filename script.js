@@ -15,12 +15,39 @@ class BarbeariaAgenda {
     }
 
     agendar(nome, data, horario) {
-        // Verifica se já existe um agendamento para a mesma data e horário
+       
+        const [hora, minuto] = horario.split(':').map(Number);
+        const horarioAgendado = new Date(`${data}T${horario}`);
+
+        const horarioInicio = new Date(`${data}T07:00`);
+        const horarioFim = new Date(`${data}T19:30`);
+
+        if (horarioAgendado < horarioInicio || horarioAgendado > horarioFim) {
+            alert('Horário deve estar entre 07:00 e 19:30.');
+            return false;
+        }
+
         const agendamento = `${data} - ${horario} (${nome})`;
         const agendamentoExistente = this.horarios.find(item => item.startsWith(`${data} - ${horario}`));
 
         if (agendamentoExistente) {
             alert('Horário já agendado! Escolha outro.');
+            return false;
+        }
+
+       
+        const horarioMinimo = new Date(horarioAgendado.getTime() - 30 * 60000); 
+        const horarioMaximo = new Date(horarioAgendado.getTime() + 30 * 60000); 
+
+        const conflito = this.horarios.some(item => {
+            const [dataItem, horaItem] = item.split(' - ');
+            const [hora] = horaItem.split(' (');
+            const horarioItem = new Date(`${dataItem}T${hora}`);
+            return (horarioItem >= horarioMinimo && horarioItem <= horarioMaximo);
+        });
+
+        if (conflito) {
+            alert('Horário não disponível! Escolha outro horário com intervalo de 30 minutos.');
             return false;
         }
 
