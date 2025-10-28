@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento Barbearia</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento - Barbearia</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Agendamento Barbearia</h1>
-        <form id="form-agendamento">
-            <input class="nome" type="text" id="nome" placeholder="Seu Nome" required>
-            <input class="horario" type="time" id="horario" required>
-            <input class="data" type="date" id="data" required>
-            <button type="submit">Agendar</button>
-        </form>
-        <h2>Horários Agendados</h2>
-        <ul id="lista-agendamentos"></ul>
-    </div>
+  <div class="container">
+    <h1>Agende seu horário 💈</h1>
+    <form id="form-agendamento">
+      <input type="text" id="nomeCliente" placeholder="Seu nome" required>
+      <select name="Serviços" id="servico">
+        <option value="Corte">Corte</option>
+          <option value="Barba">Barba</option>
+          <option value="Sobrancelha">Sobrancelha</option>
+         <option value="Corte+Sobrancelha">Corte+Sobrancelha</option>
+         <option value="Corte+Barba">Corte+Barba</option>
+        
+    </select>
+      <input type="date" id="data" required>
+      <input type="time" id="hora" required>
+      <button type="submit">Agendar</button>
+    </form>
 
- <script src="script.js"></script>
+    <p id="mensagem"></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

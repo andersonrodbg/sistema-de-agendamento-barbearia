@@ -1,99 +1,154 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: #0e0e0e;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 
 .container {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    width: 90%;
-    max-width: 400px;
-}
- 
-.nome{
-    margin-left: -10px;;
+  background-color: #141414;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+  transition: 0.3s ease;
 }
 
-.horario{
-    margin-left: -10px;
+.container:hover {
+  border-color: #2b2b2b;
 }
 
-.data{
-    margin-left: -10px;
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
-
-h1, h2 {
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
 
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 input, button {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
 
 input {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    text-align: center;
+  background-color: #1c1c1c;
+  color: #fff;
+  border: 1px solid #2a2a2a;
 }
 
-input::placeholder {
-    color: #ddd;
+input:focus {
+  border-color: #fff;
+  outline: none;
 }
 
 button {
-    background: #27ae60;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 button:hover {
-    background: #219150;
+  background-color: #ededed;
 }
 
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
-}
-
-li {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 8px;
-    font-weight: bold;
+#mensagem {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
 
-li:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transition: 0.3s;
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros input {
+  flex: 1;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.agendamento {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.agendamento:hover {
+  transform: translateY(-3px);
+  border-color: #3a3a3a;
+}
+
+.agendamento p {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.agendamento strong {
+  color: #fff;
+}
+
+
+button#btnFiltrar, button#btnTodos {
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+  border: 1px solid #2a2a2a;
+}
+
+button#btnFiltrar:hover, button#btnTodos:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
 }
