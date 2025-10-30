@@ -1,154 +1,154 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Sora", sans-serif;
+  letter-spacing: -0.3px;
 }
 
 body {
-  background-color: #0e0e0e;
-  color: #f1f1f1;
+  background: #0f0f0f;
+  color: #ffffff;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 40px 20px;
-}
-
-
-.container {
-  background-color: #141414;
-  border: 1px solid #222;
-  border-radius: 20px;
+  align-items: center;
   padding: 40px;
+}
+
+/* Estrutura principal */
+.container {
   width: 100%;
-  max-width: 420px;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
-  transition: 0.3s ease;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
-.container:hover {
-  border-color: #2b2b2b;
-}
-
+/* Título */
 h1 {
-  font-size: 1.6rem;
-  margin-bottom: 25px;
-  text-align: center;
+  font-size: 2.4rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #222;
+  padding-bottom: 18px;
 }
 
+/* Formulário */
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 22px;
 }
 
-input, button {
-  border: none;
-  border-radius: 10px;
-  padding: 14px;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-
-input {
-  background-color: #1c1c1c;
+input,
+select {
+  background: transparent;
   color: #fff;
-  border: 1px solid #2a2a2a;
+  border: none;
+  border-bottom: 2px solid #2b2b2b;
+  padding: 14px 4px;
+  font-size: 1.05rem;
+  transition: border 0.3s;
 }
 
-input:focus {
-  border-color: #fff;
-  outline: none;
+input:focus,
+select:focus {
+  border-bottom: 2px solid #ffffff;
 }
 
+/* Botão */
 button {
-  background-color: #fff;
-  color: #000;
-  font-weight: 600;
+  background: #ffffff;
+  color: #0f0f0f;
+  border: none;
+  padding: 16px;
+  font-size: 1.05rem;
   cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
 button:hover {
-  background-color: #ededed;
+  background: #d6d6d6;
 }
 
-
+/* Mensagem */
 #mensagem {
   text-align: center;
-  margin-top: 20px;
-  font-size: 0.95rem;
-  color: #ccc;
+  font-size: 1rem;
+  opacity: 0.8;
 }
 
-
+/* Painel do Barbeiro */
 .filtros {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
 }
 
-.filtros input {
+.filtros button {
   flex: 1;
 }
 
 .lista {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 18px;
+  margin-top: 10px;
 }
 
+/* Cartão de agendamento */
 .agendamento {
-  background-color: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 12px;
-  padding: 15px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #141414;
+  transition: 0.3s;
 }
 
 .agendamento:hover {
-  transform: translateY(-3px);
-  border-color: #3a3a3a;
-}
-
-.agendamento p {
-  margin-bottom: 6px;
-  font-size: 0.95rem;
+  border-color: #ffffff;
 }
 
 .agendamento strong {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.agendamento small {
+  opacity: 0.65;
+}
+
+select{
+  appearance: none;
+  -webkit-apparence: none;
+  -moz-appearance: none;
+}
+
+select option{
+  background: #0f0f0f;
   color: #fff;
+  padding: 12px;
+  border: none;
 }
 
+select option:checked{
 
-button#btnFiltrar, button#btnTodos {
-  background-color: #1c1c1c;
-  color: #f1f1f1;
-  border: 1px solid #2a2a2a;
+  background: #222;
+  color: #fff;
+
 }
 
-button#btnFiltrar:hover, button#btnTodos:hover {
-  background-color: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-
-@media (max-width: 480px) {
-  .container {
-    padding: 25px;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  input, button {
-    font-size: 14px;
-  }
+select{
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  backgrounf-size: 18px;
+  padding-right: 35px;
 }

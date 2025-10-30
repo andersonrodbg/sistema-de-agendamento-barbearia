@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agendamento - Barbearia</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-</head>
+</head> <!-- ✅ FECHANDO O HEAD -->
+
 <body>
   <div class="container">
     <h1>Agende seu horário 💈</h1>
     <form id="form-agendamento">
       <input type="text" id="nomeCliente" placeholder="Seu nome" required>
+
       <select name="Serviços" id="servico">
         <option value="Corte">Corte</option>
-          <option value="Barba">Barba</option>
-          <option value="Sobrancelha">Sobrancelha</option>
-         <option value="Corte+Sobrancelha">Corte+Sobrancelha</option>
-         <option value="Corte+Barba">Corte+Barba</option>
-        
-    </select>
+        <option value="Barba">Barba</option>
+        <option value="Sobrancelha">Sobrancelha</option>
+        <option value="Corte+Sobrancelha">Corte + Sobrancelha</option>
+        <option value="Corte+Barba">Corte + Barba</option>
+      </select>
+
       <input type="date" id="data" required>
       <input type="time" id="hora" required>
       <button type="submit">Agendar</button>
